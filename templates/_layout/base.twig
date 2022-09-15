@@ -1,0 +1,54 @@
+{% block html_head_container %}
+
+<!doctype html>
+<!--[if lt IE 9]><html class="no-js no-svg ie lt-ie9 lt-ie8 lt-ie7" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 9]><html class="no-js no-svg ie ie9 lt-ie9 lt-ie8" {{ site.language_attributes }}> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js no-svg" {{ site.language_attributes }}> <!--<![endif]-->
+<head>
+    <meta charset="{{ site.charset }}"/>
+    <meta name="description" content="{{ site.description }}">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="author" href="{{ site.theme.link }}/humans.txt"/>
+    <link rel="pingback" href="{{ site.pingback_url }}"/>
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    {# Css #}
+    <link rel="stylesheet" href="{{ site.theme.link }}/style.css" type="text/css" media="screen"/>
+
+    {% set appCssUrl = get_env('ENVIRONMENT') == 'prod' ? 'css/app.css'|revAsset : 'css/app.css' %}
+    <link rel="stylesheet" href="{{ site.theme.link }}/dist/{{ appCssUrl }}" type="text/css"/>
+
+    {{ function('wp_head') }}
+
+    {% block extraHead %}{% endblock %}
+
+</head>
+{% endblock %}
+
+<body x-data
+      x-on:resize.window.debounce="$store.page.resized()"
+      x-on:scroll.window.debounce="$store.page.scrolled()">
+
+{% include '_layout/nav.twig' %}
+
+{% block content %}{% endblock %}
+
+{% include '_layout/footer.twig' %}
+
+{% include '_components/preload.twig' %}
+
+{% block extraFooter %}{% endblock %}
+
+{% set appJsUrl = get_env('ENVIRONMENT') == 'prod' ? 'js/app.js'|revAsset : 'js/app.js' %}
+<script src="{{ site.theme.link }}/dist/{{ appJsUrl }}" defer></script>
+
+{{ function('wp_footer') }}
+</body>
+</html>

@@ -1,0 +1,16 @@
+## Team
+
+Designed & Developed by tribes.work
+
+Developers:
+    Abdulla Rezaei
+    @AbRezaei
+
+
+Designer:
+Dan C. Lindsay
+
+
+## Site
+
+Software: Built with [Timber](http://upstatement.com/timber) by Upstatement

@@ -1,0 +1,117 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "license": "ISC",
+  "type": "module",
+  "env": {
+    "local": ""
+  },
+  "paths": {
+    "dependencies": "node_modules/",
+    "public": "",
+    "templates": "templates/",
+    "dist": {
+      "base": "dist/",
+      "css": "dist/css/",
+      "js": "dist/js/",
+      "images": "dist/images/",
+      "favicon": "dist/images/favicon/"
+    },
+    "assets": {
+      "base": "src/",
+      "scss": "src/scss/",
+      "js": "src/js/",
+      "images": "src/images/",
+      "favicon": "src/images/favicon/",
+      "fonts": "src/fonts/"
+    }
+  },
+  "files": {
+    "tailwind": "./tailwind.config.js",
+    "dist": {
+      "css": "app.css",
+      "js": "app.js"
+    },
+    "assets": {
+      "scss": "app.scss",
+      "js": "index.js"
+    }
+  },
+  "critical": {
+    "dest": "_criticalCss/",
+    "elements": []
+  },
+  "purgeCss": {
+    "whitelist": [],
+    "whitelistPatterns": [
+      "lazy-load.*",
+      "flickity.*",
+      "aos.*"
+    ]
+  },
+  "cssDependencies": [],
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.7",
+    "alpinejs": "^3.10.3",
+    "fg-loadcss": "^3.1.0",
+    "tailwindcss": "^3.1.8",
+    "tailwindcss-typography": "^3.1.0",
+    "vanilla-lazyload": "^17.8.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@babel/preset-env": "^7.19.0",
+    "@tailwindcss/jit": "^0.1.18",
+    "@vue/compiler-sfc": "^3.2.39",
+    "autoprefixer": "^10.4.9",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.27.10",
+    "critical": "^5.0.1",
+    "css-loader": "^6.7.1",
+    "cssnano": "^5.1.13",
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "file-loader": "^6.2.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-dest-clean": "^0.5.0",
+    "gulp-favicons": "^3.0.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-purgecss": "^4.1.3",
+    "gulp-rev": "^9.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "node-sass": "^7.0.3",
+    "postcss": "^8.4.16",
+    "purgecss": "^4.1.3",
+    "rev-del": "^2.0.0",
+    "sass": "^1.54.9",
+    "vue": "^3.2.39",
+    "vue-loader": "^17.0.0",
+    "webpack": "^5.74.0",
+    "webpack-merge": "^5.8.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=dev gulp dev",
+    "prod": "NODE_ENV=prod gulp prod"
+  }
+}
