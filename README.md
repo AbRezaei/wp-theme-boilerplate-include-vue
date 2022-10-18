@@ -4,6 +4,10 @@ This repository contains the Codebase for the wordpress theme.
 ## Get Started
 Clone this repository and in order to make this boilerplate compatible with your project, first, search the words `boilerplate` and `Boilerplate` in the entire project and change it to the name of your project.
 
+## Required plugins
+- Advanced custom fields pro
+- svg support
+
 ## Installation
 Run the following commands to get setup:
 
